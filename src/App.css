@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Fuentes */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/src/assets/fonts/Ubuntu-Bold.ttf") format("ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format("ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/src/assets/fonts/Ubuntu-Regular.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+}  
+
+@theme {
+    /* Colores primarios */
+    --color-navy-blue: hsl(213, 96%, 18%);
+    --color-purplish-blue: hsl(243, 100%, 62%);
+    --color-pastel-blue: hsl(228, 100%, 84%);
+    --color-light-blue: hsl(206, 94%, 87%);
+    --color-strawberry-red: hsl(354, 84%, 57%);
+
+    /* Colores neutros */
+    --color-cold-gray: hsl(231, 11%, 63%);
+    --color-light-gray: hsl(229, 24%, 87%);
+    --color-magnolia: hsl(217, 100%, 97%);
+    --color-alabaster: hsl(231, 100%, 99%);
+    --color-white: hsl(0, 0%, 100%);
+
+    /* Sombras */
+    --shadow-3xl: 2px 15px 20px 0 var(--color-light-gray);
+
+    /* Tamaño de fuente */
+    --text-paragraph: 16px;
+
+    /* Imagenes de fondo */
+    --background-image-sidebar-desktop: url("/src/assets/images/bg-sidebar-desktop.svg");
+    --background-image-sidebar-mobile: url("/src/assets/images/bg-sidebar-mobile.svg");
+    --background-image-icon-advanced: url("/src/assets/images/bg-icon-advanced.svg");
+    --background-image-icon-arcade: url("/src/assets/images/icon-arcade.svg");
+    --background-image-icon-checkmark: url("/src/assets/images/icon-checkmark.svg");
+    --background-image-icon-pro: url("/src/assets/images/icon-pro.svg");
+    --background-image-icon-thank-you: url("/src/assets/images/icon-thank-you.svg");
+}
