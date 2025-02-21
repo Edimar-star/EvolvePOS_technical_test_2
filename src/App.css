@@ -2,24 +2,21 @@
 
 /* Fuentes */
 @font-face {
-    font-family: "Ubuntu";
-    src: url("/src/assets/fonts/Ubuntu-Bold.ttf") format("ttf");
+    font-family: Ubuntu;
+    src: url("/src/assets/fonts/Ubuntu-Bold.ttf") format("truetype");
     font-weight: 700;
-    font-style: normal;
 }
 
 @font-face {
-    font-family: "Ubuntu";
-    src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format("ttf");
+    font-family: Ubuntu;
+    src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
     font-weight: 500;
-    font-style: normal;
 }
 
 @font-face {
-    font-family: "Ubuntu";
-    src: url("/src/assets/fonts/Ubuntu-Regular.ttf") format("ttf");
+    font-family: Ubuntu;
+    src: url("/src/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
     font-weight: 400;
-    font-style: normal;
 }  
 
 @theme {
@@ -40,13 +37,17 @@
     /* Sombras */
     --shadow-3xl: 2px 15px 20px 0 var(--color-light-gray);
 
-    /* Tamaño de fuente */
+    /* Fuentes */
+    --font-Ubuntu: Ubuntu;
+    --font-weight-bold: 700;
+    --font-weight-normal: 500;
+    --font-weight-regular: 400;
     --text-paragraph: 16px;
 
     /* Imagenes de fondo */
     --background-image-sidebar-desktop: url("/src/assets/images/bg-sidebar-desktop.svg");
     --background-image-sidebar-mobile: url("/src/assets/images/bg-sidebar-mobile.svg");
-    --background-image-icon-advanced: url("/src/assets/images/bg-icon-advanced.svg");
+    --background-image-icon-advanced: url("/src/assets/images/icon-advanced.svg");
     --background-image-icon-arcade: url("/src/assets/images/icon-arcade.svg");
     --background-image-icon-checkmark: url("/src/assets/images/icon-checkmark.svg");
     --background-image-icon-pro: url("/src/assets/images/icon-pro.svg");
