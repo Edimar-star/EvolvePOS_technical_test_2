@@ -19,7 +19,7 @@ export const Main = ({ children, stepActive } : { children: React.ReactNode, ste
                                 `}>
                                 {index + 1}
                             </div>
-                            <div className={`md:block ${index === stepActive ? "block" : "hidden"}`}>
+                            <div className={`sm:block ${index === stepActive ? "block" : "hidden"}`}>
                                 <h4 className="font-Ubuntu font-regular text-xs text-cold-gray">STEP {index + 1}</h4>
                                 <h3 className="font-Ubuntu font-bold text-xs tracking-wider text-white">{step}</h3>
                             </div>
