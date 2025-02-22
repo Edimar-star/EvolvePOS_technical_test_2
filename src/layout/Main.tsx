@@ -5,7 +5,7 @@ export const Main = ({ children, stepActive } : { children: React.ReactNode, ste
 
         <main className="sm:min-h-[550px] bg-magnolia h-7/10 w-[90vw] shadow-3xl flex items-center justify-center">
 
-            <section className="sm:min-w-[550px] sm:min-h-[500px] bg-white h-6/8 w-[855px] shadow-3xl rounded-xl p-4 gap-2 flex flex-row">
+            <section className="sm:min-w-[550px] sm:min-h-[500px] bg-white h-6/8 w-[890px] shadow-3xl rounded-xl p-4 gap-2 flex flex-row">
 
                 <aside className="w-[250px] bg-sidebar-desktop bg-cover bg-center bg-no-repeat rounded-lg">
                     <ul className="flex flex-col px-8 py-10 w-full gap-8">
@@ -27,7 +27,7 @@ export const Main = ({ children, stepActive } : { children: React.ReactNode, ste
                     </ul>
                 </aside>
 
-                <article className="w-auto h-full flex-1 px-[78px] pt-7 pb-4">
+                <article className="w-auto h-full flex-1 px-[60px] xl:px-[78px] pt-7 pb-4">
                     {children}
                 </article>
 

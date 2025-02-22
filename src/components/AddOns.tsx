@@ -1,5 +1,12 @@
-import { Main } from "../layout/Main";
+import { MainForm } from "../layout/MainForm";
 
 export const AddOns = ({ stepActive, previousStep, nextStep } : { stepActive: number, previousStep: Function, nextStep: Function }) => {
-    return <Main stepActive={stepActive}>Add-Ons</Main>
+    return <MainForm title=""
+                description=""
+                stepActive={stepActive}
+                previousStep={previousStep}
+                nextStep={() => nextStep()}
+            >
+        .
+    </MainForm>
 }
