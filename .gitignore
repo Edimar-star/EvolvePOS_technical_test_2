@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 technical_resources/
+.gitpod.yml

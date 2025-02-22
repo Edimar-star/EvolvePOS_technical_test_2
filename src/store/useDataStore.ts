@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { DataPlan, InputsInfo } from "../router/types";
+import { DataPlan, InputsInfo } from "../utils/types";
 
 type Data = {
     user?: InputsInfo

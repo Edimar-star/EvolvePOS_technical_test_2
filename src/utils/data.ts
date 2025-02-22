@@ -1,4 +1,5 @@
 import { FieldsInfo, OptionsPlan } from "./types"
+import { formatPhone } from "./functions";
 
 export const optionsPlan: OptionsPlan = {
     monthly: {
@@ -90,8 +91,11 @@ export const fieldsInfo : FieldsInfo[] = [
                 message: "This field is required" 
             }, 
             pattern: { 
-                value: /^\+\d{1,3}\s\d{3}\s\d{3}\s\d{4}$/, 
+                value: /^\+\d{1,3}\s?\d{3}\s?\d{3}\s?\d{3,4}$/, 
                 message: "Enter a valid phone number." 
+            },
+            onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
+                e.target.value = formatPhone(e.target.value);
             }
         }
     }

@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
-import { optionsPlan } from "../router/data";
-import { DataOptionPlan, DataPlan } from "../router/types";
+import { optionsPlan } from "../utils/data";
+import { DataOptionPlan, DataPlan } from "../utils/types";
 import { useState } from "react";
 import { MainForm } from "../layout/MainForm";
 import { useDataStore } from "../store/useDataStore";
@@ -52,9 +52,9 @@ export const Plan = ({ stepActive, previousStep, nextStep } : { stepActive: numb
                         {optionsPlan[optionPeriodSelected].data.map((option, index) => 
                             <fieldset className={`
                                     flex flex-col justify-between p-4 border-1 border-light-gray rounded-lg 
-                                    hover:cursor-pointer hover:bg-pastel-blue gap-8
+                                    hover:cursor-pointer hover:border-navy-blue gap-8
                                     ${field.value.name === option.name 
-                                        ? "border-purplish-blue bg-alabaster" 
+                                        ? "border-navy-blue bg-alabaster" 
                                         : ""}
                                 `} 
                                 key={index} 

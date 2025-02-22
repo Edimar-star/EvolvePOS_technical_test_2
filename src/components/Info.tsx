@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { InputsInfo } from '../router/types'
-import { fieldsInfo } from '../router/data'
+import { InputsInfo } from '../utils/types'
+import { fieldsInfo } from '../utils/data'
 import { MainForm } from "../layout/MainForm";
 import { useDataStore } from "../store/useDataStore";
 

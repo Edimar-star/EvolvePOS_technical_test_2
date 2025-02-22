@@ -32,5 +32,5 @@ export type FieldsInfo = {
     name: string,
     placeholder: string,
     type: HTMLInputTypeAttribute,
-    validations: Record<string, Record<string, string | boolean | RegExp>>
+    validations: Record<string, Record<string, string | boolean | RegExp> | Function>
 }
