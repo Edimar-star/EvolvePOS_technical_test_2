@@ -4,8 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  server: {
-    allowedHosts: ["5173-edimarstar-evolvepostec-b4p2wm3asos.ws-us117.gitpod.io"]
-  }
+    plugins: [react(), tailwindcss()],
+    base: "/EvolvePOS_technical_test_2",
+    build: {
+        chunkSizeWarningLimit: 1000,
+    },
 })

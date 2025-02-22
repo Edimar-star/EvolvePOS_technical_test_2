@@ -2,8 +2,10 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { InputsInfo } from '../router/types'
 import { fieldsInfo } from '../router/data'
 import { MainForm } from "../layout/MainForm";
+import { useDataStore } from "../store/useDataStore";
 
 export const Info = ({ stepActive, nextStep } : { stepActive: number, nextStep: Function }) => {
+    const { createUser } = useDataStore()
     const {
         register,
         handleSubmit,
@@ -11,7 +13,7 @@ export const Info = ({ stepActive, nextStep } : { stepActive: number, nextStep: 
     } = useForm<InputsInfo>();
 
     const onSubmit: SubmitHandler<InputsInfo> = (data: InputsInfo) => {
-        console.log(data)
+        createUser(data)
         nextStep()
     }
 

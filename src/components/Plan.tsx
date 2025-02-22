@@ -1,8 +1,9 @@
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { optionsPlan } from "../router/data";
-import { DataOptionPlan } from "../router/types";
+import { DataOptionPlan, DataPlan } from "../router/types";
 import { useState } from "react";
 import { MainForm } from "../layout/MainForm";
+import { useDataStore } from "../store/useDataStore";
 
 type IPlanForm = {
     optionPlan: DataOptionPlan
@@ -10,6 +11,7 @@ type IPlanForm = {
 
 export const Plan = ({ stepActive, previousStep, nextStep } : { stepActive: number, previousStep: Function, nextStep: Function }) => {
     const [optionPeriodSelected, setOptionPeriodSelected] = useState<"monthly" | "yearly">("monthly")
+    const { createPlan } = useDataStore()
     const {
         handleSubmit,
         setValue,
@@ -27,7 +29,9 @@ export const Plan = ({ stepActive, previousStep, nextStep } : { stepActive: numb
     }
 
     const onSubmit: SubmitHandler<IPlanForm> = (data: IPlanForm) => {
-        console.log(data)
+        const { image, ...plan } = data.optionPlan
+        plan.isMonthly = optionPeriodSelected === "monthly"
+        createPlan(plan as DataPlan)
         nextStep()
     }
     

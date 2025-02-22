@@ -1,11 +1,15 @@
 import { HTMLInputTypeAttribute } from "react"
 
-export type DataOptionPlan = {
+export type DataPlan = {
     name: string
-    image: string
     price: number
+    isMonthly?: boolean
     monthsFree?: number
 }
+
+export type DataOptionPlan = {
+    image: string
+} & DataPlan
 
 type OptionPlan = {
     data: DataOptionPlan[]

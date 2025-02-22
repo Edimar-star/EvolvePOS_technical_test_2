@@ -6,7 +6,7 @@ import { AddOns } from './components/AddOns';
 import { Summary } from './components/Summary';
 
 const App = () => {
-    const [stepActive, setStepActive] = useState<number>(1);
+    const [stepActive, setStepActive] = useState<number>(0);
     const steps : Array<React.ReactNode> = [
         <Info stepActive={stepActive} nextStep={nexStep} />,
         <Plan stepActive={stepActive} previousStep={previousStep} nextStep={nexStep} />,
