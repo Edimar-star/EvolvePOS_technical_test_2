@@ -1,9 +1,5 @@
-export const formatPhone = (phone: string) : string => {
-    let digits = phone.replace(/[^\d+]/g, "");
-
-    return digits.replace(/^(\+\d{1,2})?(\d{3})?(\d{3})?(\d{3,4})?/, 
-        (_, p1, p2, p3, p4) => {
-            return [p1, p2, p3, p4].filter(Boolean).join(" ");
-        }
-    );
-}
+export const formatPhone = (phone: string) : string => phone
+    .replace(/[^\d+]/g, "")
+    .replace(/(\+\d{2})?(\d{0,3})?(\d{0,3})?(\d{0,4})?/, 
+        (_, a, b, c, d) => [a, b, c, d].filter(Boolean).join(" "))
+    .trim();

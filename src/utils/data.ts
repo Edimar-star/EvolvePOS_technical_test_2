@@ -91,7 +91,7 @@ export const fieldsInfo : FieldsInfo[] = [
                 message: "This field is required" 
             }, 
             pattern: { 
-                value: /^\+\d{1,3}\s?\d{3}\s?\d{3}\s?\d{3,4}$/, 
+                value: /^\+\d{2}\s\d{3}\s\d{3}\s\d{4}$/, 
                 message: "Enter a valid phone number." 
             },
             onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
